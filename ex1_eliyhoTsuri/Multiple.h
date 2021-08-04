@@ -1,0 +1,15 @@
+#pragma once
+#include "Function.h"
+class Multiple :public Function
+{
+public:
+	Multiple(shared_ptr<Function> func1,shared_ptr<Function> func2);
+	Multiple(const Multiple &mul, double num);
+	const double getCalc();
+	const string getDimens();
+private:
+	shared_ptr <Function> m_func1;
+	shared_ptr <Function> m_func2;
+	double m_num;
+	double m_calc;
+};
